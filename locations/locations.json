@@ -1,0 +1,2595 @@
+[
+  {
+    "name": "All Locations",
+    "children": [
+      {
+        "name": "Crateria",
+        "color": "#d83890",
+        "children": [
+          {
+            "name": "Major Items",
+            "chest_unopened_img": "images/major_unopened.png",
+            "chest_opened_img": "images/major_opened.png",
+            "children": [
+              {
+                "name": "Energy Tank, Gauntlet",
+                "access_rules": [
+                  "$canEnterAndLeaveGauntlet,$countTanks:1",
+                  "$canEnterAndLeaveGauntletTournament,$isNotCasual"
+                ],
+                "sections": [
+                  {
+                    "name": "Major Item",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 584,
+                    "y": 144
+                  },
+                  {
+                    "map": "crateriamap",
+                    "x": 456,
+                    "y": 148
+                  }
+                ]
+              },
+              {
+                "name": "Bomb Torizo",
+                "access_rules": [
+                  "morph,$canOpenRedDoors",
+                ],
+                "sections": [
+                  {
+                    "name": "Major Item",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 840,
+                    "y": 272
+                  },
+                  {
+                    "map": "crateriamap",
+                    "x": 712,
+                    "y": 276
+                  }
+                ]
+              },
+              {
+                "name": "Energy Tank, Terminator",
+                "access_rules": [
+                  "$canBombWalls",
+                  "speed",
+                ],
+                "sections": [
+                  {
+                    "name": "Major Item",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 424,
+                    "y": 272
+                  },
+                  {
+                    "map": "crateriamap",
+                    "x": 296,
+                    "y": 276
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Minor Items",
+            "chest_unopened_img": "images/minor_unopened.png",
+            "chest_opened_img": "images/minor_opened.png",
+            "children": [
+              {
+                "name": "Power Bomb (Crateria surface)",
+                "access_rules": [
+                  "$canPowerBomb,speed,$needMinorItems",
+                  "$canPowerBomb,$canFly,$needMinorItems"
+                ],
+                "sections": [
+                  {
+                    "name": "Minor Item",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 1096,
+                    "y": 112
+                  },
+                  {
+                    "map": "crateriamap",
+                    "x": 968,
+                    "y": 116
+                  }
+                ]
+              },
+              {
+                "name": "Missile (outside Wrecked Ship bottom)",
+                "access_rules": [
+                  "$canAccessWreckedShip,$needMinorItems",
+                ],
+                "sections": [
+                  {
+                    "name": "Minor Item",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 1256,
+                    "y": 240
+                  },
+                  {
+                    "map": "crateriamap",
+                    "x": 1128,
+                    "y": 244
+                  }
+                ]
+              },
+              {
+                "name": "Missile (outside Wrecked Ship top)",
+                "access_rules": [
+                  "$canAccessWreckedShip,phantoon,$needMinorItems",
+                ],
+                "sections": [
+                  {
+                    "name": "Minor Item",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 1290,
+                    "y": 78
+                  },
+                  {
+                    "map": "crateriamap",
+                    "x": 1160,
+                    "y": 84
+                  }
+                ]
+              },
+              {
+                "name": "Missile (outside Wrecked Ship middle)",
+                "access_rules": [
+                  "$canAccessWreckedShip,phantoon,$needMinorItems",
+                ],
+                "sections": [
+                  {
+                    "name": "Minor Item",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 1256,
+                    "y": 143
+                  },
+                  {
+                    "map": "crateriamap",
+                    "x": 1128,
+                    "y": 148
+                  }
+                ]
+              },
+              {
+                "name": "Missile (Crateria moat)",
+                "access_rules": [
+                  "$canAccessWreckedShip,$needMinorItems",
+                ],
+                "sections": [
+                  {
+                    "name": "Minor Item",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 1192,
+                    "y": 208
+                  },
+                  {
+                    "map": "crateriamap",
+                    "x": 1064,
+                    "y": 212
+                  }
+                ]
+              },
+              {
+                "name": "Missile (Crateria bottom)",
+                "access_rules": [
+                  "$canBombWalls,$needMinorItems"
+                ],
+                "sections": [
+                  {
+                    "name": "Minor Item",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 680,
+                    "y": 656
+                  },
+                  {
+                    "map": "crateriamap",
+                    "x": 552,
+                    "y": 660
+                  }
+                ]
+              },
+              {
+                "name": "After Gauntlet",
+                "access_rules": [
+                  "$canEnterAndLeaveGauntlet,$canBombPassages,$countTanks:2,$needMinorItems",
+                  "$canEnterAndLeaveGauntletTournament,$canBombPassages,$isNotCasual,$needMinorItems"
+                ],
+                "sections": [
+                  {
+                    "name": "Minor Item (left)",
+                    "item_count": 1
+                  },
+                  {
+                    "name": "Minor Item (right)",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 392,
+                    "y": 176
+                  },
+                  {
+                    "map": "crateriamap",
+                    "x": 264,
+                    "y": 180
+                  }
+                ]
+              },
+              {
+                "name": "Super Missile (Crateria)",
+                "access_rules": [
+                  "$canPowerBomb,speed,$countTanks:2,$needMinorItems",
+                ],
+                "sections": [
+                  {
+                    "name": "Minor Item",
+                    "capture_item": true,
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 808,
+                    "y": 368
+                  },
+                  {
+                    "map": "crateriamap",
+                    "x": 680,
+                    "y": 372
+                  }
+                ]
+              },
+              {
+                "name": "Missile (Crateria middle)",
+                "access_rules": [
+                  "$canBombPassages,$needMinorItems"
+                ],
+                "sections": [
+                  {
+                    "name": "Minor Item",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 552,
+                    "y": 304
+                  },
+                  {
+                    "map": "crateriamap",
+                    "x": 424,
+                    "y": 308
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Brinstar",
+        "children": [
+          {
+            "name": "Blue Brinstar",
+            "color": "#081848",
+            "children": [
+              {
+                "name": "Major Items",
+                "chest_unopened_img": "images/major_unopened.png",
+                "chest_opened_img": "images/major_opened.png",
+                "children": [
+                  {
+                    "name": "Morphing Ball",
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 744,
+                        "y": 976
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 744,
+                        "y": 404
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Energy Tank, Brinstar Ceiling",
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 936,
+                        "y": 976
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 936,
+                        "y": 404
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Minor Items",
+                "chest_unopened_img": "images/minor_unopened.png",
+                "chest_opened_img": "images/minor_opened.png",
+                "children": [
+                  {
+                    "name": "Missile (blue Brinstar middle)",
+                    "access_rules": [
+                      "morph,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 968,
+                        "y": 976
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 968,
+                        "y": 404
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (blue Brinstar bottom)",
+                    "access_rules": [
+                      "morph,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 840,
+                        "y": 1008
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 840,
+                        "y": 436
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missiles (blue Brinstar top)",
+                    "access_rules": [
+                      "$canPowerBomb,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item (front)",
+                        "item_count": 1
+                      },
+                      {
+                        "name": "Minor Item (back)",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 872,
+                        "y": 912
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 872,
+                        "y": 340
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Power Bomb (blue Brinstar)",
+                    "access_rules": [
+                      "$canPowerBomb,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 680,
+                        "y": 976
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 680,
+                        "y": 404
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Green Brinstar",
+            "color": "#48a848",
+            "children": [
+              {
+                "name": "Major Items",
+                "chest_unopened_img": "images/major_unopened.png",
+                "chest_opened_img": "images/major_opened.png",
+                "children": [
+                  {
+                    "name": "Reserve Tank, Brinstar",
+                    "access_rules": [
+                      "$canOpenRedDoors,$canBombWalls,morph,$isNotCasual",
+                      "$canOpenRedDoors,speed"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 360,
+                        "y": 784
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 360,
+                        "y": 212
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Energy Tank, Etecoons",
+                    "access_rules": [
+                      "$canPowerBomb"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 136,
+                        "y": 976
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 136,
+                        "y": 404
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Minor Items",
+                "chest_unopened_img": "images/minor_unopened.png",
+                "chest_opened_img": "images/minor_opened.png",
+                "children": [
+                  {
+                    "name": "Power Bomb (green Brinstar bottom)",
+                    "access_rules": [
+                      "$canPowerBomb,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 328,
+                        "y": 880
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 328,
+                        "y": 308
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (green Brinstar below super missile)",
+                    "access_rules": [
+                      "$canOpenRedDoors,$canBombWalls,$needMinorItems",
+                      "$canOpenRedDoors,speed,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 296,
+                        "y": 784
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 296,
+                        "y": 212
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Super Missile (green Brinstar top)",
+                    "access_rules": [
+                      "$canOpenRedDoors,$canBombWalls,morph,$isNotCasual,$needMinorItems",
+                      "$canOpenRedDoors,speed,$needMinorItems",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 264,
+                        "y": 752
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 264,
+                        "y": 180
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Behind Brinstar Reserve",
+                    "access_rules": [
+                      "$canOpenRedDoors,$isNotCasual",
+                      "$canOpenRedDoors,speed"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item (front)",
+                        "access_rules": [
+                          "$canBombWalls,morph,$needMinorItems"
+                        ],
+                        "item_count": 1
+                      },
+                      {
+                        "name": "Minor Item (back)",
+                        "access_rules": [
+                          "$canBombPassages,$needMinorItems"
+                        ],
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 392,
+                        "y": 784
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 392,
+                        "y": 212
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (green Brinstar pipe)",
+                    "access_rules": [
+                      "$canBombPassages,super,$needMinorItems",
+                      "$canPowerBomb,$needMinorItems",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 648,
+                        "y": 1008
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 648,
+                        "y": 436
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Super Missile (green Brinstar bottom)",
+                    "access_rules": [
+                      "$canPowerBomb,super,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 104,
+                        "y": 976
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 104,
+                        "y": 404
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Pink Brinstar",
+            "color": "#704858",
+            "access_rules": [
+              "$canAccessPinkBrinstar",
+            ],
+            "children": [
+              {
+                "name": "Major Items",
+                "chest_unopened_img": "images/major_unopened.png",
+                "chest_opened_img": "images/major_opened.png",
+                "children": [
+                  {
+                    "name": "Charge Beam",
+                    "access_rules": [
+                      "$canAccessPinkBrinstar,$canBombPassages",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 488,
+                        "y": 1008
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 488,
+                        "y": 436
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Energy Tank, Waterway",
+                    "access_rules": [
+                      "$canPowerBomb,$canOpenRedDoors,speed"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 200,
+                        "y": 1072
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 200,
+                        "y": 500
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Energy Tank, Brinstar Gate",
+                    "access_rules": [
+                      "$canPowerBomb,wave",
+                      "$canPowerBomb,super",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 616,
+                        "y": 912
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 616,
+                        "y": 340
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Minor Items",
+                "chest_unopened_img": "images/minor_unopened.png",
+                "chest_opened_img": "images/minor_opened.png",
+                "children": [
+                  {
+                    "name": "Super Missile (pink Brinstar)",
+                    "access_rules": [
+                      "$canBombPassages,super,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 712,
+                        "y": 944
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 712,
+                        "y": 372
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (pink Brinstar top)",
+                    "access_rules": [
+                      "$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 487,
+                        "y": 879
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 488,
+                        "y": 308
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (pink Brinstar bottom)",
+                    "access_rules": [
+                      "$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 488,
+                        "y": 976
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 488,
+                        "y": 404
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Power Bomb (pink Brinstar)",
+                    "access_rules": [
+                      "$canPowerBomb,super,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 424,
+                        "y": 912
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 424,
+                        "y": 340
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Red Brinstar",
+            "color": "#601820",
+            "access_rules": [
+              "$canAccessRedBrinstar",
+            ],
+            "children": [
+              {
+                "name": "Major Items",
+                "chest_unopened_img": "images/major_unopened.png",
+                "chest_opened_img": "images/major_opened.png",
+                "children": [
+                  {
+                    "name": "X-Ray Scope",
+                    "access_rules": [
+                      "$canPowerBomb,grapple",
+                      "$canPowerBomb,space",
+                      "$canPowerBomb,$canAccessXRayTournament,$isNotCasual",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 680,
+                        "y": 1136
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 680,
+                        "y": 564
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Spazer",
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1160,
+                        "y": 1200
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 1160,
+                        "y": 628
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Minor Items",
+                "chest_unopened_img": "images/minor_unopened.png",
+                "chest_opened_img": "images/minor_opened.png",
+                "children": [
+                  {
+                    "name": "Power Bomb (red Brinstar sidehopper room)",
+                    "access_rules": [
+                      "$canPowerBomb,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1064,
+                        "y": 912
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 1064,
+                        "y": 340
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Power Bomb (red Brinstar spike room)",
+                    "access_rules": [
+                      "$canPowerBomb,$needMinorItems",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1064,
+                        "y": 1008
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 1064,
+                        "y": 436
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (red Brinstar spike room)",
+                    "access_rules": [
+                      "$canPowerBomb,$needMinorItems",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1032,
+                        "y": 1008
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 1032,
+                        "y": 436
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Kraid",
+            "color": "#007038",
+            "access_rules": [
+              "$canAccessKraid",
+            ],
+            "children": [
+              {
+                "name": "Major Items",
+                "chest_unopened_img": "images/major_unopened.png",
+                "chest_opened_img": "images/major_opened.png",
+                "children": [
+                  {
+                    "name": "Energy Tank, Kraid",
+                    "access_rules": [
+                      "kraid",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1320,
+                        "y": 1264
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 1320,
+                        "y": 692
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Varia Suit",
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1768,
+                        "y": 1264
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 1768,
+                        "y": 692
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Minor Items",
+                "chest_unopened_img": "images/minor_unopened.png",
+                "chest_opened_img": "images/minor_opened.png",
+                "children": [
+                  {
+                    "name": "Missile (Kraid)",
+                    "access_rules": [
+                      "$canPowerBomb,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1448,
+                        "y": 1232
+                      },
+                      {
+                        "map": "brinstarmap",
+                        "x": 1448,
+                        "y": 660
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Norfair",
+        "children": [
+          {
+            "name": "Upper Norfair",
+            "color": "#b81818",
+            "children": [
+              {
+                "name": "Major Items",
+                "chest_unopened_img": "images/major_unopened.png",
+                "chest_opened_img": "images/major_opened.png",
+                "children": [
+                  {
+                    "name": "Ice Beam",
+                    "access_rules": [
+                      "$canAccessIce",
+                      "$canAccessIceTournament",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1096,
+                        "y": 1360
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 216,
+                        "y": 148
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Energy Tank, Crocomire",
+                    "access_rules": [
+                      "$canAccessCrocomire"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1544,
+                        "y": 1616
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 664,
+                        "y": 404
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Hi-Jump Boots",
+                    "access_rules": [
+                      "$canAccessRedBrinstar",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1160,
+                        "y": 1488
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 280,
+                        "y": 276
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Grapple Beam",
+                    "access_rules": [
+                      "$canAccessCrocomire",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1032,
+                        "y": 1808
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 152,
+                        "y": 596
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Reserve Tank, Norfair",
+                    "access_rules": [
+                      "$canAccessNorfairReserve",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      },
+                      {
+                        "name": "Minor Item",
+                        "chest_unopened_img": "images/minor_unopened.png",
+                        "chest_opened_img": "images/minor_opened.png",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1512,
+                        "y": 1360
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 632,
+                        "y": 148
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Speed Booster",
+                    "access_rules": [
+                      "$canAccessHeatedNorfair",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 2120,
+                        "y": 1360
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 1240,
+                        "y": 148
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Wave Beam",
+                    "access_rules": [
+                      "$canAccessHeatedNorfair",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1864,
+                        "y": 1424
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 984,
+                        "y": 212
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Minor Items",
+                "chest_unopened_img": "images/minor_unopened.png",
+                "chest_opened_img": "images/minor_opened.png",
+                "children": [
+                  {
+                    "name": "Missile (lava room)",
+                    "access_rules": [
+                      "$canAccessHeatedNorfair,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1448,
+                        "y": 1424
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 568,
+                        "y": 212
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (below Ice Beam)",
+                    "access_rules": [
+                      "$canAccessKraid,$canPowerBomb,$canHellRun,$needMinorItems",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1000,
+                        "y": 1424
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 120,
+                        "y": 212
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (above Crocomire)",
+                    "access_rules": [
+                      "$canAccessCrocomire,$canFly,$needMinorItems",
+                      "$canAccessCrocomire,grapple,$needMinorItems",
+                      "$canAccessCrocomire,hijump,speed,$needMinorItems",
+                      "$canAccessCrocomire,hijump,$canSpringBallJump,$needMinorItems",
+                      "$canAccessCrocomire,hijump,varia,ice,$needMinorItems",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "capture_item": true,
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1288,
+                        "y": 1488
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 408,
+                        "y": 276
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (Hi-Jump Boots)",
+                    "access_rules": [
+                      "$canAccessRedBrinstar,$needMinorItems",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1192,
+                        "y": 1456
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 312,
+                        "y": 244
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Energy Tank (Hi-Jump Boots)",
+                    "access_rules": [
+                      "$canAccessRedBrinstar,$needMinorItems",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1224,
+                        "y": 1456
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 344,
+                        "y": 244
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Power Bomb (Crocomire)",
+                    "access_rules": [
+                      "$canAccessCrocomire,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1224,
+                        "y": 1616
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 344,
+                        "y": 404
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (below Crocomire)",
+                    "access_rules": [
+                      "$canAccessCrocomire,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1384,
+                        "y": 1776
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 504,
+                        "y": 564
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (Grapple Beam)",
+                    "access_rules": [
+                      "$canAccessCrocomire,$canFly,$needMinorItems",
+                      "$canAccessCrocomire,grapple,$needMinorItems",
+                      "$canAccessCrocomire,speed,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1192,
+                        "y": 1776
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 312,
+                        "y": 564
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (bubble Norfair green door)",
+                    "access_rules": [
+                      "$canAccessNorfairReserve,$needMinorItems",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1608,
+                        "y": 1360
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 728,
+                        "y": 148
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (bubble Norfair)",
+                    "access_rules": [
+                      "$canAccessHeatedNorfair,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1672,
+                        "y": 1456
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 792,
+                        "y": 244
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (Speed Booster)",
+                    "access_rules": [
+                      "$canAccessHeatedNorfair,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 2088,
+                        "y": 1360
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 1208,
+                        "y": 148
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (Wave Beam)",
+                    "access_rules": [
+                      "$canAccessHeatedNorfair,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1768,
+                        "y": 1424
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 888,
+                        "y": 212
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Lower Norfair",
+            "color": "#700010",
+            "access_rules": [
+              "$canAccessLowerNorfair",
+            ],
+            "children": [
+              {
+                "name": "Major Items",
+                "chest_unopened_img": "images/major_unopened.png",
+                "chest_opened_img": "images/major_opened.png",
+                "children": [
+                  {
+                    "name": "Energy Tank, Ridley",
+                    "access_rules": [
+                      "$canDoWorstRoom"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1640,
+                        "y": 1840
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 760,
+                        "y": 628
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Screw Attack",
+                    "access_rules": [
+                      "$canFly",
+                      "spring",
+                      "speed",
+                      "hijump"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1576,
+                        "y": 1808
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 696,
+                        "y": 596
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Energy Tank, Firefleas",
+                    "access_rules": [
+                      "$canDoWorstRoom"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 2122,
+                        "y": 1646
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 1240,
+                        "y": 436
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Minor Items",
+                "chest_unopened_img": "images/minor_unopened.png",
+                "chest_opened_img": "images/minor_opened.png",
+                "children": [
+                  {
+                    "name": "Missile (Gold Torizo)",
+                    "access_rules": [
+                      "space,$needMinorItems",
+                      "{},$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "capture_item": true,
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1512,
+                        "y": 1776
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 632,
+                        "y": 564
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Super Missile (Gold Torizo)",
+                    "access_rules": [
+                      "$needMinorItems",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1544,
+                        "y": 1776
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 664,
+                        "y": 564
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (Mickey Mouse room)",
+                    "access_rules": [
+                      "$canDoWorstRoom,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1832,
+                        "y": 1616
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 952,
+                        "y": 404
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (lower Norfair above fire flea room)",
+                    "access_rules": [
+                      "$canDoWorstRoom,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 2056,
+                        "y": 1456
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 1176,
+                        "y": 244
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Power Bomb (lower Norfair above fire flea room)",
+                    "access_rules": [
+                      "$canDoWorstRoom,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 2120,
+                        "y": 1488
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 1240,
+                        "y": 276
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Power Bomb (Power Bombs of shame)",
+                    "access_rules": [
+                      "$canDoWorstRoom,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1960,
+                        "y": 1744
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 1080,
+                        "y": 532
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (lower Norfair near Wave Beam)",
+                    "access_rules": [
+                      "$canDoWorstRoom,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1864,
+                        "y": 1456
+                      },
+                      {
+                        "map": "norfairmap",
+                        "x": 984,
+                        "y": 244
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Wrecked Ship",
+        "color": "#707048",
+        "access_rules": [
+          "$canAccessWreckedShip",
+        ],
+        "children": [
+          {
+            "name": "Major Items",
+            "chest_unopened_img": "images/major_unopened.png",
+            "chest_opened_img": "images/major_opened.png",
+            "children": [
+              {
+                "name": "Reserve Tank, Wrecked Ship",
+                "access_rules": [
+                  "$canAccessWreckedShipReserve,phantoon",
+                  "$canAccessWreckedShipReserveTournament,$isNotCasual,phantoon"
+                ],
+                "sections": [
+                  {
+                    "name": "Major Item",
+                    "capture_item": true,
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 1608,
+                    "y": 112
+                  },
+                  {
+                    "map": "wreckedshipmap",
+                    "x": 504,
+                    "y": 180
+                  }
+                ]
+              },
+             {
+                "name": "Energy Tank, Wrecked Ship",
+               "access_rules": [
+                 "phantoon"
+               ],
+                "sections": [
+                  {
+                    "name": "Major Item",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 1704,
+                    "y": 176
+                  },
+                  {
+                    "map": "wreckedshipmap",
+                    "x": 600,
+                    "y": 244
+                  }
+                ]
+              },
+              {
+                "name": "Right Super, Wrecked Ship",
+                "access_rules": [
+                  "phantoon"
+                ],
+                "sections": [
+                  {
+                    "name": "Major Item",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 1800,
+                    "y": 304
+                  },
+                  {
+                    "map": "wreckedshipmap",
+                    "x": 696,
+                    "y": 372
+                  }
+                ]
+              },
+              {
+                "name": "Gravity Suit",
+                "access_rules": [
+                  "$canAccessGravity,phantoon",
+                ],
+                "sections": [
+                  {
+                    "name": "Major Item",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 1448,
+                    "y": 176
+                  },
+                  {
+                    "map": "wreckedshipmap",
+                    "x": 344,
+                    "y": 244
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Minor Items",
+            "chest_unopened_img": "images/minor_unopened.png",
+            "chest_opened_img": "images/minor_opened.png",
+            "children": [
+              {
+                "name": "Missile (Wrecked Ship middle)",
+                "access_rules": [
+                  "$needMinorItems"
+                ],
+                "sections": [
+                  {
+                    "name": "Minor Item",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 1512,
+                    "y": 272
+                  },
+                  {
+                    "map": "wreckedshipmap",
+                    "x": 408,
+                    "y": 340
+                  }
+                ]
+              },
+              {
+                "name": "Missile (Gravity Suit)",
+                "access_rules": [
+                  "$canAccessGravity,phantoon,$needMinorItems",
+                ],
+                "sections": [
+                  {
+                    "name": "Minor Item",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 1542,
+                    "y": 176
+                  },
+                  {
+                    "map": "wreckedshipmap",
+                    "x": 440,
+                    "y": 244
+                  }
+                ]
+              },
+              {
+                "name": "Missile (Wrecked Ship top)",
+                "access_rules": [
+                  "phantoon,$needMinorItems"
+                ],
+                "sections": [
+                  {
+                    "name": "Minor Item",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 1798,
+                    "y": 79
+                  },
+                  {
+                    "map": "wreckedshipmap",
+                    "x": 696,
+                    "y": 148
+                  }
+                ]
+              },
+              {
+                "name": "Super Missile (Wrecked Ship left)",
+                "access_rules": [
+                  "phantoon,$needMinorItems"
+                ],
+                "sections": [
+                  {
+                    "name": "Minor Item",
+                    "item_count": 1
+                  }
+                ],
+                "map_locations": [
+                  {
+                    "map": "fullmap",
+                    "x": 1608,
+                    "y": 304
+                  },
+                  {
+                    "map": "wreckedshipmap",
+                    "x": 504,
+                    "y": 372
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Maridia",
+        "access_rules": [
+          "$canAccessOuterMaridia"
+        ],
+        "children": [
+          {
+            "name": "Green Maridia",
+            "color": "#409078",
+            "children": [
+              {
+                "name": "Major Items",
+                "chest_unopened_img": "images/major_unopened.png",
+                "chest_opened_img": "images/major_opened.png",
+                "children": [
+                  {
+                    "name": "Energy Tank, Mama turtle",
+                    "access_rules": [
+                      "$canFly",
+                      "speed",
+                      "grapple"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1416,
+                        "y": 1040
+                      },
+                      {
+                        "map": "maridiamap",
+                        "x": 488,
+                        "y": 468
+                      }
+                    ]
+                  },
+                  {
+                    "name": "West Sand Hole",
+                    "access_rules": [
+                      "$canDoSuitlessMaridia",
+                      "gravity",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      },
+                      {
+                        "name": "Minor Item",
+                        "chest_unopened_img": "images/minor_unopened.png",
+                        "chest_opened_img": "images/minor_opened.png",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1480,
+                        "y": 1104
+                      },
+                      {
+                        "map": "maridiamap",
+                        "x": 552,
+                        "y": 532
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Spring Ball",
+                    "access_rules": [
+                      "$canAccessInnerMaridia,ice",
+                      "$canAccessInnerMaridia,grapple,$canFly",
+                      "$canAccessInnerMaridia,grapple,hijump",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1896,
+                        "y": 1168
+                      },
+                      {
+                        "map": "maridiamap",
+                        "x": 968,
+                        "y": 596
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Minor Items",
+                "chest_unopened_img": "images/minor_unopened.png",
+                "chest_opened_img": "images/minor_opened.png",
+                "children": [
+                  {
+                    "name": "Missile (green Maridia shinespark)",
+                    "access_rules": [
+                      "gravity,speed,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1160,
+                        "y": 1040
+                      },
+                      {
+                        "map": "maridiamap",
+                        "x": 232,
+                        "y": 468
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Super Missile (green Maridia)",
+                    "access_rules": [
+                      "$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1192,
+                        "y": 1008
+                      },
+                      {
+                        "map": "maridiamap",
+                        "x": 264,
+                        "y": 436
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (green Maridia tatori)",
+                    "access_rules": [
+                      "$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1448,
+                        "y": 1072
+                      },
+                      {
+                        "map": "maridiamap",
+                        "x": 520,
+                        "y": 500
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (right Maridia sand pit room)",
+                    "access_rules": [
+                      "$canAccessInnerMaridia,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1576,
+                        "y": 1104
+                      },
+                      {
+                        "map": "maridiamap",
+                        "x": 648,
+                        "y": 532
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Power Bomb (right Maridia sand pit room)",
+                    "access_rules": [
+                      "gravity,$needMinorItems",
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1608,
+                        "y": 1136
+                      },
+                      {
+                        "map": "maridiamap",
+                        "x": 680,
+                        "y": 564
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Pink Maridia",
+            "color": "#a04890",
+            "children": [
+              {
+                "name": "Major Items",
+                "chest_unopened_img": "images/major_unopened.png",
+                "chest_opened_img": "images/major_opened.png",
+                "children": [
+                  {
+                    "name": "Energy Tank, Botwoon",
+                    "access_rules": [
+                      "$canAccessBotwoon"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1768,
+                        "y": 912
+                      },
+                      {
+                        "map": "maridiamap",
+                        "x": 840,
+                        "y": 340
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Space Jump",
+                    "access_rules": [
+                      "$canAccessDraygon"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 2056,
+                        "y": 976
+                      },
+                      {
+                        "map": "maridiamap",
+                        "x": 1128,
+                        "y": 404
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Minor Items",
+                "chest_unopened_img": "images/minor_unopened.png",
+                "chest_opened_img": "images/minor_opened.png",
+                "children": [
+                  {
+                    "name": "Missile (pink Maridia)",
+                    "access_rules": [
+                      "gravity,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1608,
+                        "y": 944
+                      },
+                      {
+                        "map": "maridiamap",
+                        "x": 680,
+                        "y": 372
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Super Missile (pink Maridia)",
+                    "access_rules": [
+                      "gravity,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1640,
+                        "y": 944
+                      },
+                      {
+                        "map": "maridiamap",
+                        "x": 712,
+                        "y": 372
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (Draygon)",
+                    "access_rules": [
+                      "$canAccessDraygon,$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 2184,
+                        "y": 880
+                      },
+                      {
+                        "map": "maridiamap",
+                        "x": 1256,
+                        "y": 308
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Yellow Maridia",
+            "color": "#907830",
+            "access_rules": [
+              "$canAccessInnerMaridia"
+            ],
+            "children": [
+              {
+                "name": "Major Items",
+                "chest_unopened_img": "images/major_unopened.png",
+                "chest_opened_img": "images/major_opened.png",
+                "children": [
+                  {
+                    "name": "Plasma Beam",
+                    "access_rules": [
+                      "$canAccessPlasma,draygon",
+                      "$canAccessPlasmaTournament,draygon"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Major Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1736,
+                        "y": 720
+                      },
+                      {
+                        "map": "maridiamap",
+                        "x": 808,
+                        "y": 148
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Minor Items",
+                "chest_unopened_img": "images/minor_unopened.png",
+                "chest_opened_img": "images/minor_opened.png",
+                "children": [
+                  {
+                    "name": "Watering Hole",
+                    "access_rules": [
+                      "$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item (left)",
+                        "item_count": 1
+                      },
+                      {
+                        "name": "Minor Item (right)",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1224,
+                        "y": 848
+                      },
+                      {
+                        "map": "maridiamap",
+                        "x": 296,
+                        "y": 276
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Missile (yellow Maridia false wall)",
+                    "access_rules": [
+                      "$needMinorItems"
+                    ],
+                    "sections": [
+                      {
+                        "name": "Minor Item",
+                        "item_count": 1
+                      }
+                    ],
+                    "map_locations": [
+                      {
+                        "map": "fullmap",
+                        "x": 1480,
+                        "y": 848
+                      },
+                      {
+                        "map": "maridiamap",
+                        "x": 552,
+                        "y": 276
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

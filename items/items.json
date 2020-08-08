@@ -1,0 +1,224 @@
+[
+  {
+    "name": "Charge Beam",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/charge.png",
+    "codes": "charge"
+  },
+  {
+    "name": "Wave Beam",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/wave.png",
+    "codes": "wave"
+  },
+  {
+    "name": "Ice Beam",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/ice.png",
+    "codes": "ice"
+  },
+  {
+    "name": "Plasma Beam",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/plasma.png",
+    "codes": "plasma"
+  },
+  {
+    "name": "Spazer Beam",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/spazer.png",
+    "codes": "spazer"
+  },
+  {
+    "name": "Varia Suit",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/varia.png",
+    "codes": "varia"
+  },
+  {
+    "name": "Gravity Suit",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/gravity.png",
+    "codes": "gravity"
+  },
+  {
+    "name": "Morph Ball",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/morph.png",
+    "codes": "morph"
+  },
+  {
+    "name": "Bomb",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/bomb.png",
+    "codes": "bomb"
+  },
+  {
+    "name": "Spring Ball",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/springball.png",
+    "codes": "spring"
+  },
+  {
+    "name": "High Jump",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/hijump.png",
+    "codes": "hijump"
+  },
+  {
+    "name": "Space Jump",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/space.png",
+    "codes": "space"
+  },
+  {
+    "name": "Speed Booster",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/speed.png",
+    "codes": "speed"
+  },
+  {
+    "name": "Grapple",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/grapple.png",
+    "codes": "grapple"
+  },
+  {
+    "name": "Xray",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/xray.png",
+    "codes": "xray"
+  },
+  {
+    "name": "Screw Attack",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/screw.png",
+    "codes": "screw"
+  },
+  {
+    "name": "Ridley",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/Boss1.png",
+    "codes": "ridley,g4"
+  },
+  {
+    "name": "Kraid",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/Boss2.png",
+    "codes": "kraid,g4"
+  },
+  {
+    "name": "Phantoon",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/Boss3.png",
+    "codes": "phantoon,g4"
+  },
+  {
+    "name": "Draygon",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/Boss4.png",
+    "codes": "draygon,g4"
+  },
+  {
+    "name": "Etanks",
+    "type": "consumable",
+    "img": "images/etank.png",
+    "max_quantity": 14,
+    "codes": "etank,alltanks"
+  },
+  {
+    "name": "Etank (capturable)",
+    "type": "toggle",
+    "img": "images/etank.png",
+    "codes": "etank_icon"
+  },
+  {
+    "name": "Reserve Tanks",
+    "type": "consumable",
+    "img": "images/reservetank.png",
+    "max_quantity": 4,
+    "codes": "reservetank,alltanks"
+  },
+  {
+    "name": "Reserve Tank (capturable)",
+    "type": "toggle",
+    "img": "images/reservetank.png",
+    "codes": "reservetank_icon"
+  },
+  {
+    "name": "Missile Capacity",
+    "type": "consumable",
+    "img": "images/missile.png",
+    "max_quantity": 255,
+    "increment": 5,
+    "codes": "missile"
+  },
+  {
+    "name": "Missile (capturable)",
+    "type": "toggle",
+    "img": "images/missile.png",
+    "codes": "missile_icon"
+  },
+  {
+    "name": "Super Missile Capacity",
+    "type": "consumable",
+    "img": "images/super.png",
+    "max_quantity": 100,
+    "increment": 5,
+    "codes": "supermissile,super"
+  },
+  {
+    "name": "Super Missile (capturable)",
+    "type": "toggle",
+    "img": "images/super.png",
+    "codes": "supermissile_icon"
+  },
+  {
+    "name": "Power Bomb Capacity",
+    "type": "consumable",
+    "img": "images/powerbomb.png",
+    "max_quantity": 100,
+    "increment": 5,
+    "codes": "powerbomb,pb"
+  },
+  {
+    "name": "Power Bomb (capturable)",
+    "type": "toggle",
+    "img": "images/powerbomb.png",
+    "codes": "powerbomb_icon"
+  },
+  {
+    "name": "MINOR ITEMS",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/minor.png",
+    "codes": "minor_icon,minor"
+  },
+  {
+    "name": "NOOB",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/noob.png",
+    "codes": "noob_icon,noob"
+  }
+]

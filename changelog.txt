@@ -1,0 +1,16 @@
+1.0.0
+-----
+Initial release - all logic "fixes" are based on https://samus.link/logic and/or https://github.com/tewtal/SMZ3Randomizer
+
+- Removed DASH logic
+- Added "Minor Items" button to hide minor items for major/minor splits
+- Added "Noob" button to toggle casual/tournament logic
+- Fixed Plasma Beam logic
+- Fixed Wrecked Ship Reserve logic
+- Fixed Wrecked Ship Access check to account for casual logic when Noob is selected
+- Fixed Gauntlet Access check to account for casual logic when Noob is selected
+- Fixed logic for checks in heat rooms to account for no hell runs in casual when Noob is selected
+- Fixed Ice Beam logic to account for casual logic when Noob is selected
+- Fixed West Upper Norfair/Croc item access checks to account for casual logic when Noob is selected
+- Fixed Green Brinstar checks to account for casual logic when Noob is selected
+- Adjusted energy tanks for hell runs to 5
