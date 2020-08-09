@@ -1202,7 +1202,9 @@
                   {
                     "name": "Energy Tank, Crocomire",
                     "access_rules": [
-                      "$canAccessCrocomire"
+                      "$canAccessCrocomire,$isCasual",
+                      "$canAccessCrocomireTournament,$isNotCasual",
+                      "[],$canAccessCrocomireTournament,$isCasual",
                     ],
                     "sections": [
                       {
@@ -1250,7 +1252,9 @@
                   {
                     "name": "Grapple Beam",
                     "access_rules": [
-                      "$canAccessCrocomire",
+                      "$canAccessCrocomire,$isCasual",
+                      "$canAccessCrocomireTournament,$isNotCasual",
+                      "[],$canAccessCrocomireTournament,$isCasual",
                     ],
                     "sections": [
                       {
@@ -1333,7 +1337,7 @@
                     "name": "Wave Beam",
                     "access_rules": [
                       "$canAccessHeatedNorfair,$isCasual",
-                      "$canAccessHeatedNorfair,$isNotCasual",
+                      "$canAccessHeatedNorfairTournament,$isNotCasual",
                       "[],$canAccessHeatedNorfairTournament,$isCasual",
                     ],
                     "sections": [
@@ -1391,8 +1395,8 @@
                   {
                     "name": "Missile (below Ice Beam)",
                     "access_rules": [
-                      "[],$canAccessKraid,$canPowerBomb,$canHellRun,$isCasual,$needMinorItems",
-                      "$canAccessKraid,$canPowerBomb,$canHellRun,$isNotCasual,$needMinorItems",
+                      "[],$canAccessKraid,$canPowerBomb,$canHellRunShort,$isCasual,$needMinorItems",
+                      "$canAccessKraid,$canPowerBomb,$canHellRunShort,$isNotCasual,$needMinorItems",
                       "$canAccessKraid,$canPowerBomb,varia,$needMinorItems",
                     ],
                     "sections": [
@@ -1417,11 +1421,19 @@
                   {
                     "name": "Missile (above Crocomire)",
                     "access_rules": [
-                      "$canAccessCrocomire,$canFly,$needMinorItems",
-                      "$canAccessCrocomire,grapple,$needMinorItems",
-                      "$canAccessCrocomire,hijump,speed,$needMinorItems",
-                      "$canAccessCrocomire,hijump,$canSpringBallJump,$needMinorItems",
-                      "$canAccessCrocomire,hijump,varia,ice,$needMinorItems",
+                      "$canAccessCrocomireTournament,$isNotCasual,$canFly,$needMinorItems",
+                      "$canAccessCrocomireTournament,$isNotCasual,grapple,$needMinorItems",
+                      "$canAccessCrocomireTournament,$isNotCasual,hijump,speed,$needMinorItems",
+                      "$canAccessCrocomireTournament,$isNotCasual,hijump,$canSpringBallJump,$needMinorItems",
+                      "$canAccessCrocomireTournament,$isNotCasual,hijump,varia,ice,$needMinorItems",
+                      "[],$canAccessCrocomireTournament,$isCasual,$canFly,$needMinorItems",
+                      "[],$canAccessCrocomireTournament,$isCasual,grapple,$needMinorItems",
+                      "[],$canAccessCrocomireTournament,$isCasual,hijump,speed,$needMinorItems",
+                      "[],$canAccessCrocomireTournament,$isCasual,hijump,$canSpringBallJump,$needMinorItems",
+                      "[],$canAccessCrocomireTournament,$isCasual,hijump,varia,ice,$needMinorItems",
+                      "$canAccessCrocomire,$canFly,$isCasual,$needMinorItems",
+                      "$canAccessCrocomire,grapple,$isCasual,$needMinorItems",
+                      "$canAccessCrocomire,hijump,speed,$isCasual,$needMinorItems",
                     ],
                     "sections": [
                       {
@@ -1494,7 +1506,9 @@
                   {
                     "name": "Power Bomb (Crocomire)",
                     "access_rules": [
-                      "$canAccessCrocomire,$needMinorItems"
+                      "$canAccessCrocomire,$isCasual,$needMinorItems",
+                      "$canAccessCrocomireTournament,$isNotCasual,$needMinorItems",
+                      "[],$canAccessCrocomireTournament,$isCasual,$needMinorItems"
                     ],
                     "sections": [
                       {
@@ -1518,7 +1532,9 @@
                   {
                     "name": "Missile (below Crocomire)",
                     "access_rules": [
-                      "$canAccessCrocomire,$needMinorItems"
+                      "$canAccessCrocomire,$isCasual,$needMinorItems",
+                      "$canAccessCrocomireTournament,$isNotCasual,$needMinorItems",
+                      "[],$canAccessCrocomireTournament,$isCasual,$needMinorItems",
                     ],
                     "sections": [
                       {
@@ -1542,9 +1558,14 @@
                   {
                     "name": "Missile (Grapple Beam)",
                     "access_rules": [
-                      "$canAccessCrocomire,$canFly,$needMinorItems",
-                      "$canAccessCrocomire,grapple,$needMinorItems",
-                      "$canAccessCrocomire,speed,$needMinorItems"
+                      "$canAccessCrocomireTournament,speed,$isNotCasual,$needMinorItems",
+                      "$canAccessCrocomireTournament,$hasMorph,$canFly,$isNotCasual,$needMinorItems",
+                      "$canAccessCrocomireTournament,$hasMorph,$hasGrapple,$isNotCasual,$needMinorItems",
+                      "[],$canAccessCrocomireTournament,speed,$isCasual,$needMinorItems",
+                      "[],$canAccessCrocomireTournament,$hasMorph,$canFly,$isCasual,$needMinorItems",
+                      "[],$canAccessCrocomireTournament,$hasMorph,$hasGrapple,$isCasual,$needMinorItems",
+                      "$canAccessCrocomire,$hasMorph,$canFly,$isCasual,$needMinorItems",
+                      "$canAccessCrocomire,$hasMorph,speed,$canPowerBomb,$isCasual,$needMinorItems",
                     ],
                     "sections": [
                       {
@@ -1679,6 +1700,7 @@
             "access_rules": [
               "$canAccessLowerNorfair,$isCasual",
               "$canAccessLowerNorfairTournament,$isNotCasual",
+              "[],$canAccessLowerNorfairTournament,$isCasual",
             ],
             "children": [
               {
