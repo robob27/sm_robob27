@@ -15,7 +15,8 @@
                 "name": "Energy Tank, Gauntlet",
                 "access_rules": [
                   "$canEnterAndLeaveGauntlet,$countTanks:1",
-                  "$canEnterAndLeaveGauntletTournament,$isNotCasual"
+                  "$canEnterAndLeaveGauntletTournament,$isNotCasual",
+                  "[],$canEnterAndLeaveGauntletTournament,$isCasual",
                 ],
                 "sections": [
                   {
@@ -96,7 +97,7 @@
                 "name": "Power Bomb (Crateria surface)",
                 "access_rules": [
                   "$canPowerBomb,speed,$needMinorItems",
-                  "$canPowerBomb,$canFly,$needMinorItems"
+                  "$canPowerBomb,$canFly,$needMinorItems",
                 ],
                 "sections": [
                   {
@@ -120,7 +121,9 @@
               {
                 "name": "Missile (outside Wrecked Ship bottom)",
                 "access_rules": [
-                  "$canAccessWreckedShip,$needMinorItems",
+                  "$canAccessWreckedShip,$isCasual,$needMinorItems",
+                  "$canAccessWreckedShipTournament,$isNotCasual,$needMinorItems",
+                  "[],$canAccessWreckedShipTournament,$isCasual,$needMinorItems",
                 ],
                 "sections": [
                   {
@@ -144,7 +147,9 @@
               {
                 "name": "Missile (outside Wrecked Ship top)",
                 "access_rules": [
-                  "$canAccessWreckedShip,phantoon,$needMinorItems",
+                  "$canAccessWreckedShip,phantoon,$isCasual,$needMinorItems",
+                  "$canAccessWreckedShipTournament,phantoon,$isNotCasual,$needMinorItems",
+                  "[],$canAccessWreckedShipTournament,phantoon,$isCasual,$needMinorItems",
                 ],
                 "sections": [
                   {
@@ -168,7 +173,9 @@
               {
                 "name": "Missile (outside Wrecked Ship middle)",
                 "access_rules": [
-                  "$canAccessWreckedShip,phantoon,$needMinorItems",
+                  "$canAccessWreckedShip,phantoon,$isCasual,$needMinorItems",
+                  "$canAccessWreckedShipTournament,phantoon,$isNotCasual,$needMinorItems",
+                  "[],$canAccessWreckedShipTournament,phantoon,$isCasual,$needMinorItems",
                 ],
                 "sections": [
                   {
@@ -192,7 +199,9 @@
               {
                 "name": "Missile (Crateria moat)",
                 "access_rules": [
-                  "$canAccessWreckedShip,$needMinorItems",
+                  "$canAccessWreckedShipTournament,$isCasual,$needMinorItems",
+                  "$canAccessWreckedShipTournament,$isNotCasual,$needMinorItems",
+                  "[],$canAccessWreckedShipTournament,$isCasual,$needMinorItems",
                 ],
                 "sections": [
                   {
@@ -241,7 +250,8 @@
                 "name": "After Gauntlet",
                 "access_rules": [
                   "$canEnterAndLeaveGauntlet,$canBombPassages,$countTanks:2,$needMinorItems",
-                  "$canEnterAndLeaveGauntletTournament,$canBombPassages,$isNotCasual,$needMinorItems"
+                  "$canEnterAndLeaveGauntletTournament,$canBombPassages,$isNotCasual,$needMinorItems",
+                  "[],$canEnterAndLeaveGauntletTournament,$canBombPassages,$isCasual,$needMinorItems",
                 ],
                 "sections": [
                   {
@@ -354,6 +364,14 @@
                   },
                   {
                     "name": "Energy Tank, Brinstar Ceiling",
+                    "access_rules": [
+                      "[]",
+                      "$isNotCasual",
+                      "$canFly",
+                      "hijump",
+                      "speedbooster",
+                      "ice"
+                    ],
                     "sections": [
                       {
                         "name": "Major Item",
@@ -496,6 +514,7 @@
                   {
                     "name": "Reserve Tank, Brinstar",
                     "access_rules": [
+                      "[],$canOpenRedDoors,$canBombWalls,morph,$isCasual",
                       "$canOpenRedDoors,$canBombWalls,morph,$isNotCasual",
                       "$canOpenRedDoors,speed"
                     ],
@@ -601,6 +620,7 @@
                   {
                     "name": "Super Missile (green Brinstar top)",
                     "access_rules": [
+                      "[],$canOpenRedDoors,$canBombWalls,morph,$isCasual,$needMinorItems",
                       "$canOpenRedDoors,$canBombWalls,morph,$isNotCasual,$needMinorItems",
                       "$canOpenRedDoors,speed,$needMinorItems",
                     ],
@@ -626,6 +646,7 @@
                   {
                     "name": "Behind Brinstar Reserve",
                     "access_rules": [
+                      "[],$canOpenRedDoors,$isCasual",
                       "$canOpenRedDoors,$isNotCasual",
                       "$canOpenRedDoors,speed"
                     ],
@@ -921,6 +942,7 @@
                       "$canPowerBomb,grapple",
                       "$canPowerBomb,space",
                       "$canPowerBomb,$canAccessXRayTournament,$isNotCasual",
+                      "[],$canPowerBomb,$canAccessXRayTournament,$isCasual",
                     ],
                     "sections": [
                       {
@@ -1154,8 +1176,9 @@
                   {
                     "name": "Ice Beam",
                     "access_rules": [
-                      "$canAccessIce",
-                      "$canAccessIceTournament",
+                      "$canAccessIce,$isCasual",
+                      "$canAccessIceTournament,$isNotCasual",
+                      "[],$canAccessIceTournament,$isCasual",
                     ],
                     "sections": [
                       {
@@ -1251,7 +1274,9 @@
                   {
                     "name": "Reserve Tank, Norfair",
                     "access_rules": [
-                      "$canAccessNorfairReserve",
+                      "$canAccessNorfairReserve,$isCasual",
+                      "$canAccessNorfairReserveTournament,$isNotCasual",
+                      "[],$canAccessNorfairReserveTournament,$isCasual",
                     ],
                     "sections": [
                       {
@@ -1281,7 +1306,9 @@
                   {
                     "name": "Speed Booster",
                     "access_rules": [
-                      "$canAccessHeatedNorfair",
+                      "$canAccessHeatedNorfair,$isCasual",
+                      "$canAccessHeatedNorfairTournament,$isNotCasual",
+                      "[],$canAccessHeatedNorfairTournament,$isCasual",
                     ],
                     "sections": [
                       {
@@ -1305,7 +1332,9 @@
                   {
                     "name": "Wave Beam",
                     "access_rules": [
-                      "$canAccessHeatedNorfair",
+                      "$canAccessHeatedNorfair,$isCasual",
+                      "$canAccessHeatedNorfair,$isNotCasual",
+                      "[],$canAccessHeatedNorfairTournament,$isCasual",
                     ],
                     "sections": [
                       {
@@ -1336,7 +1365,9 @@
                   {
                     "name": "Missile (lava room)",
                     "access_rules": [
-                      "$canAccessHeatedNorfair,$needMinorItems"
+                      "$canAccessHeatedNorfair,$isCasual,$needMinorItems",
+                      "$canAccessHeatedNorfairTournament,$isNotCasual,$needMinorItems",
+                      "[],$canAccessHeatedNorfairTournament,$isCasual,$needMinorItems",
                     ],
                     "sections": [
                       {
@@ -1360,7 +1391,9 @@
                   {
                     "name": "Missile (below Ice Beam)",
                     "access_rules": [
-                      "$canAccessKraid,$canPowerBomb,$canHellRun,$needMinorItems",
+                      "[],$canAccessKraid,$canPowerBomb,$canHellRun,$isCasual,$needMinorItems",
+                      "$canAccessKraid,$canPowerBomb,$canHellRun,$isNotCasual,$needMinorItems",
+                      "$canAccessKraid,$canPowerBomb,varia,$needMinorItems",
                     ],
                     "sections": [
                       {
@@ -1535,7 +1568,9 @@
                   {
                     "name": "Missile (bubble Norfair green door)",
                     "access_rules": [
-                      "$canAccessNorfairReserve,$needMinorItems",
+                      "$canAccessNorfairReserve,$isCasual,$needMinorItems",
+                      "$canAccessNorfairReserveTournament,$isNotCasual,$needMinorItems",
+                      "[],$canAccessNorfairReserveTournament,$isCasual,$needMinorItems",
                     ],
                     "sections": [
                       {
@@ -1559,7 +1594,9 @@
                   {
                     "name": "Missile (bubble Norfair)",
                     "access_rules": [
-                      "$canAccessHeatedNorfair,$needMinorItems"
+                      "$canAccessHeatedNorfair,$isCasual,$needMinorItems",
+                      "$canAccessHeatedNorfairTournament,$isNotCasual,$needMinorItems",
+                      "[],$canAccessHeatedNorfairTournament,$isCasual,$needMinorItems",
                     ],
                     "sections": [
                       {
@@ -1583,7 +1620,9 @@
                   {
                     "name": "Missile (Speed Booster)",
                     "access_rules": [
-                      "$canAccessHeatedNorfair,$needMinorItems"
+                      "$canAccessHeatedNorfair,$isCasual,$needMinorItems",
+                      "$canAccessHeatedNorfairTournament,$isNotCasual,$needMinorItems",
+                      "[],$canAccessHeatedNorfairTournament,$isCasual,$needMinorItems",
                     ],
                     "sections": [
                       {
@@ -1607,7 +1646,9 @@
                   {
                     "name": "Missile (Wave Beam)",
                     "access_rules": [
-                      "$canAccessHeatedNorfair,$needMinorItems"
+                      "$canAccessHeatedNorfair,$isCasual,$needMinorItems",
+                      "$canAccessHeatedNorfairTournament,$isNotCasual,$needMinorItems",
+                      "[],$canAccessHeatedNorfairTournament,$isCasual,$needMinorItems",
                     ],
                     "sections": [
                       {
@@ -1636,7 +1677,8 @@
             "name": "Lower Norfair",
             "color": "#700010",
             "access_rules": [
-              "$canAccessLowerNorfair",
+              "$canAccessLowerNorfair,$isCasual",
+              "$canAccessLowerNorfairTournament,$isNotCasual",
             ],
             "children": [
               {
@@ -1906,7 +1948,9 @@
         "name": "Wrecked Ship",
         "color": "#707048",
         "access_rules": [
-          "$canAccessWreckedShip",
+          "$canAccessWreckedShip,$isCasual",
+          "$canAccessWreckedShipTournament,$isNotCasual",
+          "[],$canAccessWreckedShipTournament,$isCasual",
         ],
         "children": [
           {
@@ -1918,7 +1962,8 @@
                 "name": "Reserve Tank, Wrecked Ship",
                 "access_rules": [
                   "$canAccessWreckedShipReserve,phantoon",
-                  "$canAccessWreckedShipReserveTournament,$isNotCasual,phantoon"
+                  "$canAccessWreckedShipReserveTournament,$isNotCasual,phantoon",
+                  "[],$canAccessWreckedShipReserveTournament,$isCasual,phantoon",
                 ],
                 "sections": [
                   {
@@ -1991,7 +2036,9 @@
               {
                 "name": "Gravity Suit",
                 "access_rules": [
-                  "$canAccessGravity,phantoon",
+                  "$canAccessGravity,$isCasual,phantoon",
+                  "$canAccessGravityTournament,$isNotCasual,phantoon",
+                  "[],$canAccessGravity,$isCasual,phantoon",
                 ],
                 "sections": [
                   {
@@ -2046,7 +2093,9 @@
               {
                 "name": "Missile (Gravity Suit)",
                 "access_rules": [
-                  "$canAccessGravity,phantoon,$needMinorItems",
+                  "$canAccessGravity,phantoon,$isCasual,$needMinorItems",
+                  "$canAccessGravityTournament,phantoon,$isNotCasual,$needMinorItems",
+                  "[],$canAccessGravity,phantoon,$isCasual,$needMinorItems",
                 ],
                 "sections": [
                   {
@@ -2503,8 +2552,9 @@
                   {
                     "name": "Plasma Beam",
                     "access_rules": [
-                      "$canAccessPlasma,draygon",
-                      "$canAccessPlasmaTournament,draygon"
+                      "$canAccessPlasma,$isCasual,draygon",
+                      "$canAccessPlasmaTournament,$isNotCasual,draygon",
+                      "[],$canAccessPlasmaTournament,$isCasual,draygon",
                     ],
                     "sections": [
                       {

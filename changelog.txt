@@ -14,3 +14,9 @@ Initial release - all logic "fixes" are based on https://samus.link/logic and/or
 - Fixed West Upper Norfair/Croc item access checks to account for casual logic when Noob is selected
 - Fixed Green Brinstar checks to account for casual logic when Noob is selected
 - Adjusted energy tanks for hell runs to 5
+
+
+1.0.1
+-----
+
+- Out of logic checks with "Noob" enabled should now be yellow (out of logic but doable) as opposed to hidden

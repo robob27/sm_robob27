@@ -278,40 +278,6 @@ function canAccessKraid()
     return 0
 end
 
-function canAccessHeatedNorfair()
-    if canAccessRedBrinstar() == 1 and canHellRun() == 1 then
-        return 1
-    end
-    return 0
-end
-
-function canAccessCrocomire()
-    if canAccessHeatedNorfair() == 1 or isNotCasual() == 1 and
-      (canAccessKraid() == 1 and canPowerBomb() == 1 and hasSpeedBooster() == 1 and countTanks() >= 2)
-    then
-        return 1
-    end
-    return 0
-end
-
-function canAccessNorfairReserve()
-    if canAccessHeatedNorfair() == 1 and
-            (canFly() == 1 or hasGrapple() == 1 or hasIce() == 1 or hasSpringBall() == 1 or hasHiJump() == 1)
-    then
-        return 1
-    end
-    return 0
-end
-
-function canAccessLowerNorfair()
-    if canAccessHeatedNorfair() == 1 and canPowerBomb() == 1 and hasVaria() == 1 and
-            (hasHiJump() == 1 or hasGravity() == 1)
-    then
-        return 1
-    end
-    return 0
-end
-
 function canDoWorstRoom()
     if canAccessLowerNorfair() == 1 and (
             canFly() == 1 or
@@ -319,13 +285,6 @@ function canDoWorstRoom()
                     hasHiJump() == 1 or
                     hasSpringBall() == 1
     ) then
-        return 1
-    end
-    return 0
-end
-
-function canAccessGravity()
-    if canAccessWreckedShip() == 1 and (hasVaria() == 1 or countTanks() >= 1) then
         return 1
     end
     return 0
@@ -375,11 +334,27 @@ function needMinorItems()
   return 1
 end
 
+function doneMinorItems()
+  if needMinorItems() == 1 then
+    return 0
+  end
+
+  return 1
+end
+
 function isNotCasual()
   local casual = Tracker:ProviderCountForCode("noob")
 
   if casual >= 1 then
       return 0
+  end
+
+  return 1
+end
+
+function isCasual()
+  if isNotCasual() == 1 then
+    return 0
   end
 
   return 1
@@ -432,25 +407,34 @@ function canEnterAndLeaveGauntlet()
   return 0
 end
 
--- need alt logic for short hell runs.. maybe - this checked for 3 tanks before
 function canHellRun()
-  if (isNotCasual() == 1 and (heatProof() == 1 or countTanks() >= 5)) or
-    heatProof() == 1 then
+  if heatProof() == 1 or countTanks() >= 5 then
       return 1
   end
+
   return 0
 end
 
 
 function canAccessWreckedShip()
   if canCrossMoat() == 1 and hasSuper() == 1 and canPowerBomb() == 1 then
-      return 1
+    return 1
   end
+
   return 0
 end
 
+function canAccessWreckedShipTournament()
+  if hasSuper() == 1 and canPowerBomb() == 1 then
+    return 1
+  end
+
+  return 0
+end
+
+-- only applies to casual
 function canCrossMoat()
-  if isNotCasual() == 1 or (
+  if (
     hasSpeedBooster() == 1 or
     hasGrapple() == 1 or
     hasSpaceJump() == 1 or
@@ -463,32 +447,35 @@ function canCrossMoat()
 end
 
 function canAccessWreckedShipReserve()
-    if canAccessWreckedShip() == 1 and hasSpeedBooster() == 1 and (
-      hasGrapple() == 1 or
-      hasSpaceJump() == 1 or
-      (hasVaria() == 1 and countTanks() >= 2) or
-      countTanks() >= 3
-    ) then
-      return 1
-    end
-    return 0
+  if canAccessWreckedShip() == 1 and hasSpeedBooster() == 1 and (
+    hasGrapple() == 1 or
+    hasSpaceJump() == 1 or
+    (hasVaria() == 1 and countTanks() >= 2) or
+    countTanks() >= 3
+  ) then
+    return 1
+  end
+
+  return 0
 end
 
 function canAccessWreckedShipReserveTournament()
-  if canAccessWreckedShip() == 1 and hasSpeedBooster() == 1 and
+  if canAccessWreckedShipTournament() == 1 and hasSpeedBooster() == 1 and
     (hasVaria() == 1 or countTanks() >= 2) then
       return 1
   end
+
   return 0
 end
 
 function canAccessPlasmaTournament()
-  if isNotCasual() == 1 and canAccessDraygon() == 1 and
+  if canAccessDraygon() == 1 and
     ((hasCharge() == 1 and countTanks() >= 3) or hasScrewAttack() == 1 or hasPlasma() == 1 or hasSpeedBooster() == 1) and
     (canFly() == 1 or hasHiJump() == 1 or canSpringBallJump() == 1 or hasSpeedBooster() == 1)
   then
-      return 1
+    return 1
   end
+
   return 0
 end
 
@@ -497,8 +484,9 @@ function canAccessPlasma()
     (hasScrewAttack() == 1 or hasPlasma() == 1) and
     (canFly() == 1 or hasHiJump() == 1)
   then
-      return 1
+    return 1
   end
+
   return 0
 end
 
@@ -511,7 +499,7 @@ function canAccessIce()
 end
 
 function canAccessIceTournament()
-  if isNotCasual() == 1 and canAccessWestNorfair() == 1 and hasSuper() == 1 and (hasVaria() == 1 or countTanks() >= 3) then
+  if canAccessWestNorfair() == 1 and hasSuper() == 1 and (hasVaria() == 1 or countTanks() >= 3) then
     return 1
   end
 
@@ -520,6 +508,97 @@ end
 
 function canAccessWestNorfair()
   if canBombWalls() == 1 or hasSpeedBooster() == 1 and (hasSuper() == 1 and hasMorph() == 1) then
+    return 1
+  end
+
+  return 0
+end
+
+function canAccessCrocomire()
+  if canAccessHeatedNorfair() == 1 and
+    (canAccessKraid() == 1 and canPowerBomb() == 1 and hasSpeedBooster() == 1 and countTanks() >= 2)
+  then
+    return 1
+  end
+
+  return 0
+end
+
+function canAccessCrocomireTournament()
+  if canAccessHeatedNorfairTournament() == 1 and
+    (canAccessKraid() == 1 and canPowerBomb() == 1 and hasSpeedBooster() == 1 and countTanks() >= 2)
+  then
+    return 1
+  end
+
+  return 0
+end
+
+function canAccessHeatedNorfairTournament()
+  if canAccessRedBrinstar() == 1 and canHellRun() == 1 then
+    return 1
+  end
+
+  return 0
+end
+
+function canAccessHeatedNorfair()
+  if canAccessRedBrinstar() == 1 and heatProof() == 1 then
+    return 1
+  end
+
+  return 0
+end
+
+function canAccessNorfairReserve()
+  if canAccessHeatedNorfair() == 1 and
+    (canFly() == 1 or hasGrapple() == 1 or hasIce() == 1 or hasSpringBall() == 1 or hasHiJump() == 1)
+  then
+    return 1
+  end
+
+  return 0
+end
+
+function canAccessNorfairReserveTournament()
+  if canAccessHeatedNorfairTournament() == 1 and
+    (canFly() == 1 or hasGrapple() == 1 or hasIce() == 1 or hasSpringBall() == 1 or hasHiJump() == 1)
+  then
+    return 1
+  end
+
+  return 0
+end
+
+function canAccessLowerNorfair()
+  if canAccessHeatedNorfair() == 1 and canPowerBomb() == 1 and hasVaria() == 1 and
+    (hasHiJump() == 1 or hasGravity() == 1)
+  then
+    return 1
+  end
+  return 0
+end
+
+function canAccessLowerNorfairTournament()
+  if canAccessHeatedNorfairTournament() == 1 and canPowerBomb() == 1 and hasVaria() == 1 and
+    (hasHiJump() == 1 or hasGravity() == 1)
+  then
+    return 1
+  end
+
+  return 0
+end
+
+function canAccessGravity()
+  if canAccessWreckedShip() == 1 and (hasVaria() == 1 or countTanks() >= 1) then
+    return 1
+  end
+
+  return 0
+end
+
+function canAccessGravityTournament()
+  if canAccessWreckedShipTournament() == 1 and (hasVaria() == 1 or countTanks() >= 1) then
     return 1
   end
 
