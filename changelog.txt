@@ -20,3 +20,11 @@ Initial release - all logic "fixes" are based on https://samus.link/logic and/or
 -----
 
 - Out of logic checks with "Noob" enabled should now be yellow (out of logic but doable) as opposed to hidden
+
+1.0.2
+-----
+
+- Fixed Croc checks to not require 5 energy reserves (distinguish properly between hellruns and the 2/3 reserves required for items near Croc)
+- Fixed Wave Beam check
+- Fixed Lower Norfair checks
+

@@ -415,6 +415,13 @@ function canHellRun()
   return 0
 end
 
+function canHellRunShort()
+  if heatProof() == 1 or countTanks() >= 2 then
+      return 1
+  end
+
+  return 0
+end
 
 function canAccessWreckedShip()
   if canCrossMoat() == 1 and hasSuper() == 1 and canPowerBomb() == 1 then
@@ -516,7 +523,7 @@ end
 
 function canAccessCrocomire()
   if canAccessHeatedNorfair() == 1 and
-    (canAccessKraid() == 1 and canPowerBomb() == 1 and hasSpeedBooster() == 1 and countTanks() >= 2)
+    (canAccessKraid() == 1 and canPowerBomb() == 1 and hasSpeedBooster() == 1)
   then
     return 1
   end
@@ -525,9 +532,7 @@ function canAccessCrocomire()
 end
 
 function canAccessCrocomireTournament()
-  if canAccessHeatedNorfairTournament() == 1 and
-    (canAccessKraid() == 1 and canPowerBomb() == 1 and hasSpeedBooster() == 1 and countTanks() >= 2)
-  then
+  if (canAccessKraid() == 1 and canPowerBomb() == 1 and hasSpeedBooster() == 1 and countTanks() >= 2) then
     return 1
   end
 
@@ -572,7 +577,7 @@ end
 
 function canAccessLowerNorfair()
   if canAccessHeatedNorfair() == 1 and canPowerBomb() == 1 and hasVaria() == 1 and
-    (hasHiJump() == 1 or hasGravity() == 1)
+    (hasSpaceJump() == 1 and hasGravity() == 1)
   then
     return 1
   end
