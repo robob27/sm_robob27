@@ -279,7 +279,8 @@
               {
                 "name": "Super Missile (Crateria)",
                 "access_rules": [
-                  "$canPowerBomb,speed,$countTanks:2,$needMinorItems",
+                  "$canPowerBomb,speed,etank:3,$countTanks:2,$needMinorItems",
+                  "{$canPowerBomb}"
                 ],
                 "sections": [
                   {
@@ -1434,6 +1435,7 @@
                       "$canAccessCrocomire,$canFly,$isCasual,$needMinorItems",
                       "$canAccessCrocomire,grapple,$isCasual,$needMinorItems",
                       "$canAccessCrocomire,hijump,speed,$isCasual,$needMinorItems",
+                      "{$canAccessRedBrinstar}",
                     ],
                     "sections": [
                       {
@@ -1711,7 +1713,9 @@
                   {
                     "name": "Energy Tank, Ridley",
                     "access_rules": [
-                      "$canDoWorstRoom"
+                      "$canDoWorstRoom,$isCasual",
+                      "$canDoWorstRoomTournament,$isNotCasual",
+                      "[],$canDoWorstRoomTournament,$isCasual",
                     ],
                     "sections": [
                       {
@@ -1762,7 +1766,9 @@
                   {
                     "name": "Energy Tank, Firefleas",
                     "access_rules": [
-                      "$canDoWorstRoom"
+                      "$canDoWorstRoom,$isCasual",
+                      "$canDoWorstRoomTournament,$isNotCasual",
+                      "[],$canDoWorstRoomTournament,$isCasual",
                     ],
                     "sections": [
                       {
@@ -1843,7 +1849,9 @@
                   {
                     "name": "Missile (Mickey Mouse room)",
                     "access_rules": [
-                      "$canDoWorstRoom,$needMinorItems"
+                      "$canDoWorstRoom,$isCasual,$needMinorItems",
+                      "$canDoWorstRoomTournament,$isNotCasual,$needMinorItems",
+                      "[],$canDoWorstRoomTournament,$isCasual,$needMinorItems",
                     ],
                     "sections": [
                       {
@@ -1867,7 +1875,9 @@
                   {
                     "name": "Missile (lower Norfair above fire flea room)",
                     "access_rules": [
-                      "$canDoWorstRoom,$needMinorItems"
+                      "$canDoWorstRoom,$isCasual,$needMinorItems",
+                      "$canDoWorstRoomTournament,$isNotCasual,$needMinorItems",
+                      "[],$canDoWorstRoomTournament,$isCasual,$needMinorItems",
                     ],
                     "sections": [
                       {
@@ -1891,7 +1901,9 @@
                   {
                     "name": "Power Bomb (lower Norfair above fire flea room)",
                     "access_rules": [
-                      "$canDoWorstRoom,$needMinorItems"
+                      "$canDoWorstRoom,$isCasual,$needMinorItems",
+                      "$canDoWorstRoomTournament,$isNotCasual,$needMinorItems",
+                      "[],$canDoWorstRoomTournament,$isCasual,$needMinorItems",
                     ],
                     "sections": [
                       {
@@ -1915,7 +1927,9 @@
                   {
                     "name": "Power Bomb (Power Bombs of shame)",
                     "access_rules": [
-                      "$canDoWorstRoom,$needMinorItems"
+                      "$canDoWorstRoom,$isCasual,$needMinorItems",
+                      "$canDoWorstRoomTournament,$isNotCasual,$needMinorItems",
+                      "[],$canDoWorstRoomTournament,$isCasual,$needMinorItems",
                     ],
                     "sections": [
                       {
@@ -1939,7 +1953,9 @@
                   {
                     "name": "Missile (lower Norfair near Wave Beam)",
                     "access_rules": [
-                      "$canDoWorstRoom,$needMinorItems"
+                      "$canDoWorstRoom,$isCasual,$needMinorItems",
+                      "$canDoWorstRoomTournament,$isNotCasual,$needMinorItems",
+                      "[],$canDoWorstRoomTournament,$isCasual,$needMinorItems",
                     ],
                     "sections": [
                       {
@@ -1986,6 +2002,8 @@
                   "$canAccessWreckedShipReserve,phantoon",
                   "$canAccessWreckedShipReserveTournament,$isNotCasual,phantoon",
                   "[],$canAccessWreckedShipReserveTournament,$isCasual,phantoon",
+                  "{$canAccessWreckedShip,$isCasual,phantoon}",
+                  "{$canAccessWreckedShipTournament,$isNotCasual,phantoon}",
                 ],
                 "sections": [
                   {
@@ -2193,7 +2211,9 @@
       {
         "name": "Maridia",
         "access_rules": [
-          "$canAccessOuterMaridia"
+          "$canAccessOuterMaridia,$isCasual",
+          "$canAccessOuterMaridiaTournament,$isNotCasual",
+          "[],$canAccessOuterMaridiaTournament,$isCasual",
         ],
         "children": [
           {
@@ -2265,9 +2285,9 @@
                   {
                     "name": "Spring Ball",
                     "access_rules": [
-                      "$canAccessInnerMaridia,ice",
-                      "$canAccessInnerMaridia,grapple,$canFly",
-                      "$canAccessInnerMaridia,grapple,hijump",
+                      "$canAccessSpringBall,$isCasual",
+                      "$canAccessSpringBallTournament,$isNotCasual",
+                      "[],$canAccessSpringBallTournament,$isCasual",
                     ],
                     "sections": [
                       {
@@ -2370,7 +2390,9 @@
                   {
                     "name": "Missile (right Maridia sand pit room)",
                     "access_rules": [
-                      "$canAccessInnerMaridia,$needMinorItems"
+                      "$canAccessInnerMaridia,$isCasual,$needMinorItems",
+                      "$canAccessInnerMaridiaTournament,$isNotCasual,$needMinorItems",
+                      "[],$canAccessInnerMaridiaTournament,$isCasual,$needMinorItems",
                     ],
                     "sections": [
                       {
@@ -2431,7 +2453,9 @@
                   {
                     "name": "Energy Tank, Botwoon",
                     "access_rules": [
-                      "$canAccessBotwoon"
+                      "$canAccessBotwoon,$isCasual",
+                      "$canAccessBotwoonTournament,$isNotCasual",
+                      "[],$canAccessBotwoonTournament,$isCasual",
                     ],
                     "sections": [
                       {
@@ -2455,7 +2479,9 @@
                   {
                     "name": "Space Jump",
                     "access_rules": [
-                      "$canAccessDraygon"
+                      "$canAccessDraygon,$isCasual",
+                      "$canAccessDraygonTournament,$isNotCasual",
+                      "[],$canAccessDraygonTournament,$isCasual",
                     ],
                     "sections": [
                       {
@@ -2534,7 +2560,9 @@
                   {
                     "name": "Missile (Draygon)",
                     "access_rules": [
-                      "$canAccessDraygon,$needMinorItems"
+                      "$canAccessDraygon,$isCasual,$needMinorItems",
+                      "$canAccessDraygonTournament,$isNotCasual,$needMinorItems",
+                      "[],$canAccessDraygonTournament,$isCasual,$needMinorItems",
                     ],
                     "sections": [
                       {
@@ -2563,7 +2591,9 @@
             "name": "Yellow Maridia",
             "color": "#907830",
             "access_rules": [
-              "$canAccessInnerMaridia"
+              "$canAccessInnerMaridia,$isCasual",
+              "$canAccessInnerMaridiaTournament,$isNotCasual",
+              "[],$canAccessInnerMaridiaTournament,$isCasual",
             ],
             "children": [
               {
