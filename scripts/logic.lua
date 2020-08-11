@@ -278,51 +278,6 @@ function canAccessKraid()
     return 0
 end
 
-function canDoWorstRoom()
-    if canAccessLowerNorfair() == 1 and (
-            canFly() == 1 or
-                    (hasIce() == 1 and hasCharge() == 1) or
-                    hasHiJump() == 1 or
-                    hasSpringBall() == 1
-    ) then
-        return 1
-    end
-    return 0
-end
-
-function canAccessOuterMaridia()
-    if canAccessRedBrinstar() == 1 and canPowerBomb() == 1 and
-            (hasGravity() == 1 or (hasHiJump() == 1 and (hasIce() == 1 or hasSpringBall() == 1)))
-    then
-        return 1
-    end
-    return 0
-end
-
-function canAccessInnerMaridia()
-    if canAccessRedBrinstar() == 1 and canPowerBomb() == 1 and hasGravity() == 1 then
-        return 1
-    end
-    return 0
-end
-
-function canAccessBotwoon()
-    if canAccessRedBrinstar() == 1 and canPowerBomb() == 1 and
-            (hasIce() == 1 or hasSpeedBooster() == 1) and
-            (hasGravity() == 1 or (canDoSuitlessMaridia() == 1 and hasIce() == 1))
-    then
-        return 1
-    end
-    return 0
-end
-
-function canAccessDraygon()
-    if canAccessBotwoon() == 1 and hasGravity() == 1 then
-        return 1
-    end
-    return 0
-end
-
 -- functions added or modified by Robob27
 function needMinorItems()
   local minorItems = Tracker:ProviderCountForCode("minor")
@@ -476,7 +431,7 @@ function canAccessWreckedShipReserveTournament()
 end
 
 function canAccessPlasmaTournament()
-  if canAccessDraygon() == 1 and
+  if canAccessDraygonTournament() == 1 and
     ((hasCharge() == 1 and countTanks() >= 3) or hasScrewAttack() == 1 or hasPlasma() == 1 or hasSpeedBooster() == 1) and
     (canFly() == 1 or hasHiJump() == 1 or canSpringBallJump() == 1 or hasSpeedBooster() == 1)
   then
@@ -521,7 +476,7 @@ function canAccessWestNorfair()
   return 0
 end
 
-function canAccessCrocomire()
+function canAccessCrocomireOld()
   if canAccessHeatedNorfair() == 1 and
     (canAccessKraid() == 1 and canPowerBomb() == 1 and hasSpeedBooster() == 1)
   then
@@ -531,9 +486,42 @@ function canAccessCrocomire()
   return 0
 end
 
-function canAccessCrocomireTournament()
+function canAccessCrocomireTournamentOld()
   if (canAccessKraid() == 1 and canPowerBomb() == 1 and hasSpeedBooster() == 1 and countTanks() >= 2) then
     return 1
+  end
+
+  return 0
+end
+
+function canAccessCrocomire()
+  if (canBombWalls() == 1 or hasSpeedBooster() == 1) and (hasSuper() == 1 and hasMorph() == 1) and
+    hasVaria() == 1 and hasSuper() == 1 and (
+      (canPowerBomb() == 1 and hasSpeedBooster() == 1) or
+      (hasSpeedBooster() == 1 and hasWave() == 1) or
+      (
+        hasMorph() == 1 and (canFly() == 1 or hasHiJump() == 1) and (hasGravity() == 1 and hasWave() == 1)
+      )
+    ) then
+      return 1
+  end
+
+  return 0
+end
+
+function canAccessCrocomireTournament()
+  if (canBombWalls() == 1 or hasSpeedBooster() == 1) and (hasSuper() == 1 and hasMorph() == 1) and hasSuper() == 1 and
+    ((hasSpeedBooster() == 1 and countTanks() >= 2) or canHellRun() == 1) and
+    (
+      (canFly() == 1 or hasHiJump() == 1) or
+      canSpringBallJump() == 1 or
+      (
+        hasVaria() == 1 and (hasIce() == 1 or hasSpeedBooster() == 1)
+      )
+    ) and
+    (canBombPassages() == 1 or hasSpeedBooster() == 1 or (hasVaria() == 1 and hasMorph() == 1))
+  then
+      return 1
   end
 
   return 0
@@ -604,6 +592,123 @@ end
 
 function canAccessGravityTournament()
   if canAccessWreckedShipTournament() == 1 and (hasVaria() == 1 or countTanks() >= 1) then
+    return 1
+  end
+
+  return 0
+end
+
+function canDoWorstRoom()
+  if canAccessLowerNorfair() == 1 and canPowerBomb() == 1 and hasSpaceJump() == 1 and hasGravity() == 1 then
+    return 1
+  end
+
+  return 0
+end
+
+function canDoWorstRoomTournament()
+  if canAccessLowerNorfairTournament() == 1 and hasVaria() == 1 and canPowerBomb() == 1 and
+    (hasHiJump() == 1 or hasGravity() == 1) and
+    (canFly() == 1 or hasHiJump() == 1 or canSpringBallJump() == 1 or hasIce() == 1 and hasCharge() == 1) and
+    (canBombPassages() == 1 or hasScrewAttack() == 1 and hasSpaceJump() == 1) and
+    (hasMorph() == 1 or countTanks() >= 5) then
+      return 1
+  end
+
+  return 0
+end
+
+function canAccessSpringBall()
+  if canAccessInnerMaridia() == 1 and hasSuper() == 1 and hasGrapple() == 1 and canPowerBomb() == 1 and (hasSpaceJump() == 1 or hasHiJump() == 1) then
+    return 1
+  end
+
+  return 0
+end
+
+function canAccessSpringBallTournament()
+  if canAccessInnerMaridiaTournament() == 1 and hasSuper() == 1 and canPowerBomb() == 1 and (
+    hasGravity() == 1 and (canFly() == 1 or hasHiJump() == 1) or
+    hasIce() == 1 and hasHiJump() == 1 and canSpringBallJump() == 1 and hasSpaceJump() == 1
+  ) then
+    return 1
+  end
+
+  return 0
+end
+
+
+function canAccessOuterMaridia()
+  if hasGravity() == 1 and canAccessRedBrinstar() == 1 and canPowerBomb() == 1 then
+    return 1
+  end
+
+  return 0
+end
+
+function canAccessOuterMaridiaTournament()
+  if canAccessRedBrinstar() == 1 and canPowerBomb() == 1 and
+    (hasGravity() == 1 or (hasHiJump() == 1 and (hasIce() == 1 or hasSpringBall() == 1)))
+  then
+    return 1
+  end
+
+  return 0
+end
+
+
+function canAccessInnerMaridia()
+  if hasGravity() == 1 and canAccessRedBrinstar() == 1 and canPowerBomb() == 1 and (canFly() == 1 or hasSpeedBooster() == 1 or hasGrapple() == 1) then
+    return 1
+  end
+
+  return 0
+end
+
+function canAccessInnerMaridiaTournament()
+  if canAccessRedBrinstar() == 1 and canPowerBomb() == 1 and
+    (
+      hasGravity() == 1 or
+      (
+        hasHiJump() == 1 and
+        (
+          hasIce() == 1 or (canSpringBallJump() == 1 and hasGrapple() == 1)
+        )
+      )
+    )
+    then
+      return 1
+  end
+
+  return 0
+end
+
+function canAccessBotwoon()
+  if canAccessInnerMaridia() == 1 and hasSpeedBooster() == 1 then
+    return 1
+  end
+
+  return 0
+end
+
+function canAccessBotwoonTournament()
+  if canAccessInnerMaridiaTournament() == 1 and (hasIce() == 1 or (hasSpeedBooster() == 1 and hasGravity() == 1)) then
+    return 1
+  end
+
+  return 0
+end
+
+function canAccessDraygon()
+  if (canAccessBotwoon() == 1 and hasGravity() == 1) and (hasSpeedBooster() == 1 and (hasHiJump() == 1 or canFly() == 1)) then
+    return 1
+  end
+
+  return 0
+end
+
+function canAccessDraygonTournament()
+  if canAccessBotwoonTournament() == 1 and hasGravity() == 1 then
     return 1
   end
 

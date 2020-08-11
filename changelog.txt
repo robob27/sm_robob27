@@ -28,3 +28,10 @@ Initial release - all logic "fixes" are based on https://samus.link/logic and/or
 - Fixed Wave Beam check
 - Fixed Lower Norfair checks
 
+1.0.3
+----
+
+- Fixed locations that are checkable to show as blue again
+- Fixed Spring Ball Access for Noob
+- Fix Lower Norfair Access for Noob (space jump for casual requirement)  TODO: FIX canDoWorstRoomTournament
+- Actually fix crocs checks this time. Maybe. Pending feedback.
