@@ -280,7 +280,7 @@
                 "name": "Super Missile (Crateria)",
                 "access_rules": [
                   "$canPowerBomb,speed,etank:3,$countTanks:2,$needMinorItems",
-                  "{$canPowerBomb}"
+                  "{$canPowerBomb,$needMinorItems}"
                 ],
                 "sections": [
                   {
@@ -796,8 +796,9 @@
                   {
                     "name": "Energy Tank, Brinstar Gate",
                     "access_rules": [
-                      "$canPowerBomb,wave",
-                      "$canPowerBomb,super",
+                      "$canAccessBrinstarGateEnergyTank,$isCasual",
+                      "$canAccessBrinstarGateEnergyTankTournament,$isNotCasual",
+                      "[],$canAccessBrinstarGateEnergyTankTournament,$isCasual",
                     ],
                     "sections": [
                       {
@@ -1435,7 +1436,7 @@
                       "$canAccessCrocomire,$canFly,$isCasual,$needMinorItems",
                       "$canAccessCrocomire,grapple,$isCasual,$needMinorItems",
                       "$canAccessCrocomire,hijump,speed,$isCasual,$needMinorItems",
-                      "{$canAccessRedBrinstar}",
+                      "{$canAccessRedBrinstar,$needMinorItems}",
                     ],
                     "sections": [
                       {

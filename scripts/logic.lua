@@ -714,3 +714,19 @@ function canAccessDraygonTournament()
 
   return 0
 end
+
+function canAccessBrinstarGateEnergyTank()
+  if canPowerBomb() == 1 and hasWave() == 1 then
+    return 1
+  end
+
+  return 0
+end
+
+function canAccessBrinstarGateEnergyTankTournament()
+  if canPowerBomb() == 1 and hasSuper() == 1 then
+    return 1
+  end
+
+  return 0
+end
