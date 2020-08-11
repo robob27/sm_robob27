@@ -33,5 +33,5 @@ Initial release - all logic "fixes" are based on https://samus.link/logic and/or
 
 - Fixed locations that are checkable to show as blue again
 - Fixed Spring Ball Access for Noob
-- Fix Lower Norfair Access for Noob (space jump for casual requirement)  TODO: FIX canDoWorstRoomTournament
+- Fix Lower Norfair Access for Noob (space jump for casual requirement)
 - Actually fix crocs checks this time. Maybe. Pending feedback.
