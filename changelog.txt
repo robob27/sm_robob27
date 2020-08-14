@@ -41,3 +41,8 @@ Initial release - all logic "fixes" are based on https://samus.link/logic and/or
 
 - Fixed Brinstar Wave Gate logic for Noob
 - Added minor item check to checkable but inaccessible (blue items) that are minor
+
+1.0.5
+-----
+
+- Fixed Shaktool not requiring grapple in tournament logic
