@@ -627,7 +627,7 @@ function canAccessSpringBall()
 end
 
 function canAccessSpringBallTournament()
-  if canAccessInnerMaridiaTournament() == 1 and hasSuper() == 1 and canPowerBomb() == 1 and (
+  if canAccessInnerMaridiaTournament() == 1 and hasGrapple() == 1 and hasSuper() == 1 and canPowerBomb() == 1 and (
     hasGravity() == 1 and (canFly() == 1 or hasHiJump() == 1) or
     hasIce() == 1 and hasHiJump() == 1 and canSpringBallJump() == 1 and hasSpaceJump() == 1
   ) then
